@@ -21,3 +21,6 @@ const password = generatePassword(length, options);
 console.log(password);
 
 ```
+
+## Licence
+[MIT](LICENSE.MD)

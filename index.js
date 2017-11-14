@@ -2,18 +2,14 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const symbols = "±!@£$%^&*()_+=-§[]{};'|?><~`";
 
-const useLetters = true;
-const useNumbers = true;
-const useSymbols = true;
-const useBothCases = true;
+const defaultOptions = {
+  useLetters: true,
+  useNumbers: true,
+  useSymbols: true,
+  useBothCases: true
+};
 
-function validate(options) {
-  if (options.length === 0) {
-    throw new Error("At least one option needs to be set.")
-  }
-}
-
-function generatePassword(length, options) {
+function generatePassword(length, options=defaultOptions) {
 
   let dictionary = [];
 
@@ -41,12 +37,5 @@ function generatePassword(length, options) {
 
   return password;
 }
-
-let password = generatePassword(24, {
-  useLetters,
-  useNumbers,
-  useSymbols,
-  useBothCases
-});
 
 module.exports = generatePassword;
