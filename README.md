@@ -23,4 +23,4 @@ console.log(password);
 ```
 
 ## Licence
-[MIT](LICENSE.MD)
+[MIT](LICENSE.md)
